@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Accessibility</title>
+	<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+</head>
+<body class="accesability-body">
+	<!--This hamburger menu was partly inspired from this website https://alvarotrigo.com/blog/hamburger-menu-css/-->
+	<nav class="navbar">
+        <div class="hamburger-menu">
+            <input id="menu-toggle" type="checkbox" aria-label="Hamburger menu">
+            <label class="menu-btn" for="menu-toggle">
+                <span></span>
+            </label>
+            <a href="index.html"><img class="logo" src="media/newlogo.png" alt="logo" width="128" height="128"></a>
+            <ul class="menu-box">
+                <li><a class="menu-item" href="index.html">Welcome to OsloMet Campus Pilestredet</a></li>
+                <li><a class="menu-item" href="aspect.html">Climbing Site at Oslomet</a></li>
+                <li><a class="menu-item" href="aspect2.html">Campus</a></li>
+                <li><a class="menu-item" href="topical.html">Topical</a></li>
+                <li><a class="menu-item" href="accesability.html">Accessibility</a></li>
+            </ul>
+        </div>
+    </nav>
+
+	<main>
+		<!--creates a grid for the page-->
+		<div class="accesability-grid">
+			<!--Div made for styling purposes so the contents can be alligned to the grid-->
+			<div class="accesability-content">
+				<h1 class="accesability-h1">Accessibility</h1>
+				<h2> What have we done to ensure that our website is accessible?</h2>
+		
+				<p>
+					We’ve made sure that all of our text has enough contrast, by using dark text on light backgrounds; 
+					We’ve frequently consulted the inspect tool to assure that all of our text is legible. 
+					We’ve also used the standard hamburger menu icon so the user does not have to wonder about how to navigate our website.
+					When that icon is clicked, it transforms into an X, so there will be no confusion as to how one can exit the menu.
+				</p>
+		
+				<p>
+					We’ve also made sure that our website is viewable on all devices, by adding different code for different screen widths with the use of media queries. 
+					For most of the pages, that meant removing the grid. Like so:
+				</p>
+			</div>
+			
+			<!--Div made for styling purposes-->
+			<div class="acc-images-for-grid">
+				<img class="acc-images" src="media/mediaquery.jpg" alt="Screenshot of code that removes grid." width="236" height="106">
+			</div>
+
+			<!--Div made for styling purposes-->
+			<div class="accesability-content">
+				<p class="aaccesability-content">
+					Our images are large, so you’ll have no issues viewing them, no matter what kind of screen you’re currently using, 
+					and they all have alt text, with the exception of the hero image on the Index page, to accommodate for individuals with screen readers.
+					Some of the text is rather descriptive, while some of it is not, 
+					depending on how important the content of the image is to the content on the page.
+				</p>
+			</div>
+
+			<!--Div made for styling purposes-->
+			<div class="acc-images-for-grid">
+				<img class="acc-images" src="media/alttext.jpg" alt="Screenshot of alt text, like the one you're listening to right now!" width="988" height="319">
+			</div>
+
+			<!--Div made for styling purposes-->
+			<div class="accesability-content">
+				<p>
+					The image described in this alt text, for example, 
+					has important information on it that someone with impaired vision cannot see, 
+					so the alt text is longer, to ensure that the user can still get a clear idea of what the image says.
+				</p>
+
+				<p>
+					Our links are black by default, but change colors when you hover. On the Topical page, 
+					they also get a box shadow, both to give the page a different visual identity, 
+					and to make it crystal clear that clicking on the link will make something happen. 
+					We also made the decision to keep the underlines for the links so that they would still look like links, 
+					even though we’d changed the default color to black. Only the links have underlines. 
+					The logo in the hamburger menu also dims its opacity when you hover, to tell the user that it’s a clickable link.
+				</p>
+			</div>
+
+			<div class="acc-images-for-grid">
+				<img class="acc-images" src="media/linkcode.jpg" alt="Screenshot of the code that styles the links, with both a normal state, and one that changes
+				the apperance of the links when you hover over the link with your mouse." width="1126" height="444">
+			</div>
+
+			<!--Div made for styling purposes-->
+			<div class="accesability-content">
+				<p>
+					Sans serif is used as our font type, since it seems like the general consensus is that sans serif is more legible than serif fonts. 
+					It also helps the pages look more modern; The default HTML font-face, Times New Roman, might be great for print, 
+					but it makes web pages look slightly outdated.
+				</p>
+		
+				<p>
+					Lastly, we’ve run the LightHouse accessibility test on all of our pages. 
+					Our initial test results only got around 93 as the accessibility score, 
+					which is a little ironic, especially on the accessibility page. We have, 
+					however, improved the scores since, and these were the results:
+				</p>
+			</div>
+
+			<!--Div made for styling purposes-->
+			<div class="acc-images-for-grid">
+				<img class="acc-images" src="media/acctestsindex.png" alt="The scores for our Welcome to OsloMet Campus Pilestredet page. The scores go from 0 to 100, where 100 is the 
+				highest possible score. This page has recieved a 75 in preformance, a 100 in accessibility, a 100 in best practices, and an 87 in search engine optimization." width="988" height="767">
+			</div>
+			
+			<!--Div made for styling purposes-->
+			<div class="acc-images-for-grid">
+				<img class="acc-images" src="media/acctestaspect.png" alt="The scores for our Climbing Site at Oslomet page. This page has recieved a 100 in preformance, 
+				a 100 in accessibility, a 100 in best practices, and an 87 in search engine optimization." width="988" height="767">
+			</div>
+			
+			<!--Div made for styling purposes-->
+			<div class="acc-images-for-grid">
+				<img class="acc-images" src="media/acctestcampus.png" alt="The scores for our Campus page. This page has recieved a 95 in preformance, 
+				a 100 in accessibility, a 95 in best practices, and an 87 in search engine optimization." width="988" height="767">
+			</div>
+			
+			<!--Div made for styling purposes-->
+			<div class="acc-images-for-grid">
+				<img class="acc-images" src="media/acctesttopical.png" alt="The scores for our Topical page. This page has recieved a 100 in preformance, 
+				a 100 in accessibility, a 100 in best practices, and an 87 in search engine optimization." width="988" height="767">
+			</div>
+			
+			<!--Div made for styling purposes-->
+			<div class="acc-images-for-grid">
+				<img class="acc-images" src="media/acctestsacc.png" alt="The scores for the current page, accessibility. This page has recieved a 99 in preformance, 
+				a 100 in accessibility, a 100 in best practices, and an 87 in search engine optimization." width="988" height="767">
+			</div>
+
+		</div>
+		
+	</main>
+
+	<!--Re-uses the footer from aspect2-->
+	<footer class="footer">
+		<ul class="grid1">
+			<li><strong> OSLO METROPOLITAN UNIVERSITY</strong></li>
+			<li> STORBYUNIVERSITETET</li>
+			<li> P.O. Box 4, St. Olavs plass</li>
+			<li>NO-0130 Oslo</li>
+			<li> Norway</li>
+			<li>Tel.: +47 67 23 50 00</li>
+		</ul>
+	</footer>
+	
+</body>
+</html>
