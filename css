@@ -1,0 +1,741 @@
+/*Removes the margin for all bodies and sets the font to sans serrif*/
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+/*This hamburger menu was partly inspired from this website https://alvarotrigo.com/blog/hamburger-menu-css/*/
+#menu-toggle {
+    opacity: 0;
+}
+/*Rotates the button when clicked on*/
+#menu-toggle:checked + .menu-btn > span {
+    transform: rotate(45deg);
+}
+/*Before being clicked it will stay as it is*/
+#menu-toggle:checked + .menu-btn > span::before {
+    top: 0;
+    transform: rotate(0deg);
+}
+/*After it will rotate 90 degrees*/
+#menu-toggle:checked + .menu-btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+/*important property value is to be applied to an element and all other declarations on the element are to be ignored*/
+#menu-toggle:checked ~ .menu-box {
+    left: 0 !important;
+}
+/* fixes the position and size of the menu button*/
+.menu-btn {
+    position: absolute;
+    top: 2em;
+    right: 20rem;
+    width: 2em;
+    height: 2em;
+    cursor: pointer;
+    z-index: 1;
+}
+/*How the elements in the burger menu are displayed*/
+.menu-btn > span,
+.menu-btn > span::before,
+.menu-btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #616161;
+    transition-duration: .25s;
+}
+.menu-btn > span::before {
+    content: '';
+    top: -8px;
+}
+.menu-btn > span::after {
+    content: '';
+    top: 8px;
+}
+/*Items are block and the height of the burger menu when clicked on covers the entire screen with a background color that matches the navbar*/
+.menu-box {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    background-color: #F6F6F2;
+    transition-duration: .25s;
+}
+/*This is the css of the items in the burger menu*/
+.menu-item {
+    display: block;
+    padding: 12px 24px;
+    color: #333;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition-duration: .25s;
+}
+/*This section shows how the transition will happen when the burger menu icon is clicked on. there will be rotations towards certain angles. 
+This part also makes sure that the hamburger menu button stays on top of the screen and chooses the lenghts of its dimensions.*/
+.menu-item:hover {
+    text-decoration: underline;
+}
+
+/* the navigation bar has different attributtes such as color and size*/
+
+.navbar{
+    background: #F6F6F2;
+    overflow: auto;
+    height: 4em;
+}
+
+/*the logo has set dimesnions and position */
+.logo{
+    height: 2.5rem;
+    width: 2.5rem;
+    padding-left: 20em;
+    padding-top: 0.5em;
+    position: sticky;
+}
+
+.logo:hover {
+    opacity: 0.7;
+}
+
+/*First section of text of the website*/
+.box1{
+    background-color: #F6F6F2;
+    padding-left: 12.5em;
+    padding-right: 3.125em;
+    padding-top: 3.125em;
+    padding-bottom: 3.125em;
+    margin: 0;
+}
+
+/*re-used heading css*/
+.heading1{
+    font-size: 2em;
+    font-weight: bolder;
+    padding-left: 1.75em;
+}
+
+/*re-used paragraph css*/
+.paragraph1{
+    font-size: 1.5rem;
+    color: black;
+    padding-left: 2em;
+    padding-right: 3em;
+}
+
+/*css of the second section below the image*/
+.box2{
+    background-color: white;
+    text-align: left;
+    padding-left: 12em;
+    padding-top: 3.125em;
+    padding-bottom: 3.125em;
+    padding-right: 3.125em;
+}
+
+/*re-used paragraph css*/
+.paragraph2{
+    padding-left: 2.5em;
+    font-size: 1.5rem;
+    padding-right: 3.5em;
+}
+
+/*re-used heading css*/
+.heading2{
+    padding-left: 2em;
+    font-size: 2em;
+}
+
+/*size of the image */
+.image{
+    height: 40vw;
+    width: 100%;
+}
+/*css of the source of the image*/
+.Source{
+    padding-top: 1em;
+    padding-left: 3.125em;
+    padding-bottom: 1em;
+    font-size: 1em;
+}
+
+/*css of image 2*/
+.image2{
+    width: 80%;
+    height: 60%;
+    padding-left: 4em;
+}
+
+/*css of sorce 2*/
+.source2{
+    padding-left: 4em;
+    font-size: 1em;
+}
+
+/*seperated the footer into 3 columns and then giving it some attributes*/
+.footer{
+    background-color: #F6F6F2;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 50vw 20vw 30vw;
+}
+
+/*no dots on lists. style of the text*/
+.grid1{
+    list-style: none;
+    padding-top: 3em;
+    padding-bottom: 9em;
+    padding-left: 18.5em;
+    font-weight: normal;
+    font-family: sans-serif;
+    font-size: 1em;
+}
+
+/*sets link color to black*/
+a{
+    color: black;
+}
+
+a:hover {
+    color: #6C6C6C;
+    transition: color 0.5s;
+}
+
+/*scales the footer when website size is reduced. removes grid but the different sections keep their class name */
+@media (max-width: 930px) {
+    .footer {
+        padding-left: 0;
+        background-color: #F6F6F2;
+        overflow: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    /*the footer text is displayed like it is in the html. in list form */
+    .grid1{
+        list-style: none;
+        padding-top: 1em;
+        padding-left: 2.5em;
+        padding-bottom: 1em;
+        font-weight: normal;
+        font-family: sans-serif;
+        font-size: 1em;
+    }
+}
+/*how the rest of the website including the navbar is displayed when the website is minimized*/
+/*logo will keep its attributes but will be on the left*/
+@media (max-width: 900px) {
+    .logo{
+        height: 2.5rem;
+        width: 2.5rem;
+        padding-top: 0.5em;
+        padding-left: 0;
+        position: initial;
+    }
+/*menu button will appear on the right and keep its attributes*/
+    .menu-btn{
+        position: absolute;
+        top: 2em;
+        right: 2rem;
+        position: right;
+        width: 2em;
+        height: 2em;
+        cursor: pointer;
+        z-index: 1;
+    }
+/*same as before except for the padding*/
+    .box1{
+        background-color: #F6F6F2;
+        padding-top: 0.5em;
+        padding-left: 0;
+        padding-bottom: 0.5em;
+        padding-right: 0;
+    }
+    /*same as before except for the padding*/
+    .heading1{
+        font-size: 2em;
+        font-weight: bolder;
+        padding-left: 3.5em;
+    }
+    
+    /*re-used paragraph css*/
+    .paragraph1{
+        font-size: 1.5rem;
+        color: black;
+        padding-left: 3.5em;
+        padding-right: 1em;
+        padding-bottom: 1em;
+    }
+    
+    /*css of the second section below the image*/
+    .box2{
+        background-color: white;
+        text-align: left;
+        padding-top: 0.5em;
+        padding-left: 0;
+        padding-bottom: 0.5em;
+        padding-right: 0;
+    }
+    
+    /*re-used paragraph css*/
+    .paragraph2{
+        padding-left: 3.5em;
+        font-size: 1.5rem;
+        padding-right: 3.5em;
+    }
+    
+    /*re-used heading css*/
+    .heading2{
+        padding-left: 3.5em;
+        font-size: 2em;
+    }
+    
+    /*size of the image */
+    .image{
+        height: 40vw;
+        width: 100%;
+    }
+    /*css of the source of the image*/
+    .Source{
+        padding-top: 0.5em;
+        padding-left: 1em;
+        padding-bottom: 0.5em;
+        padding-right: 0;
+        font-size: 1em;
+    }
+    
+    /*css of image 2*/
+    .image2{
+        width: 90%;
+        height: auto;
+        padding-left: 0.5em;
+    }
+    
+    /*css of sorce 2*/
+    .source2{
+        padding-top: 0.5em;
+        padding-left: 1em;
+        padding-bottom: 0.5em;
+        padding-right: 0;
+        font-size: 1em;
+    }
+}
+
+
+/* Topical CSS */
+/* Grid with four columns, where the first and last collumns are smaller than the ones in the middle*/
+.topical-grid-container {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
+}
+
+/* Styling for the entire body, where the margins around the page have been removed, the font has been set to sans seriff, 
+and a background color has been added to distinguish the chunks of the page from the background*/
+.topical-body{
+    background-color: #8fafad;
+    font-size: 1.2rem;
+}
+
+/* Assignes the H1 a placement in the grid, alters the allignment to center, and ads a background with a transparent box shadow with some blur and rounded corners.
+Adds padding to separate the text from the edges of the background*/
+.topical-main-heading {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    font-size: 3.5rem;
+    text-align: center;
+    padding: 2rem;
+    background-color: #F6F6F2;
+    border-radius: 1rem;
+    box-shadow: 0.5rem 0.5rem 0.5rem #352b4244;
+}
+
+/*Styles the sub-headings. Smaller font, no margins*/
+.topical-subheadings {
+    font-size: 2rem;
+    margin-top: 0;
+}
+
+/* The shared styping for all the articles on the topical page. Adds am offwhite background with rounded corners and a transparent box shadow that is slightly blurred.
+There's also some added padding to create some space between the text and the edge of the background*/
+.topical-article {
+    padding: 1.5rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    background-color: #F6F6F2;
+    box-shadow: 0.5rem 0.5rem 0.5rem #352b4244;
+}
+
+/* The three following article selectors simply places the articles on the grid.*/
+.topical-article1 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.topical-article2 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+.topical-article3 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+/* Removes the margin at the bottom of the paragraph at the end of each article*/
+.topical-bottom-paragraph {
+    margin-bottom: 0;
+}
+
+/* Shared styling for both of the added images. Creates space at the top to separate it from the background, and scales the images, as well
+as rounding the corners */
+.topical-actual-image {
+    margin-top: 1rem;
+    height: auto;
+    width: 100%;
+    border-radius: 1rem;
+}
+
+/* Alligns the first image and it's paragraph on the grid, and creates a background with an off-white color, 
+a transparent box shadow. Rounds the corners of the background as well as adds some space between the background and the image*/
+.topical-image1 {
+    margin: 1rem;
+    padding: 0 1rem 1rem;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    border-radius: 1rem;
+    background-color: #F6F6F2;
+    box-shadow: 0.5rem 0.5rem 0.5rem #352b4244;
+}
+
+/* Applies the same visual design to the second image, and alligns it on the grid */
+.topical-image2 {
+    margin: 1rem;
+    padding: 0 1rem 1rem;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    border-radius: 1rem;
+    background-color: #F6F6F2;
+    box-shadow: 0.5rem 0.5rem 0.5rem #352b4244;
+}
+
+/* Makes all the links on the topical page black by default */
+.topical-links {
+    color: #000000;
+}
+
+/* Adds the psudoclass hover, and animates the color changing upon hovering. It also animates a box shadow appearing when you hover, that is slightly blurred*/
+.topical-links:hover {
+    box-shadow: 0.1rem 0.1rem 0.1rem;
+    transition-property: color, box-shadow;
+    transition-duration: 0.5s;
+    color: #6C4D96;
+}
+
+/*Changes the page when the width of the page is less than 1350, but more than 1000 px*/
+@media (max-width: 1350px) {
+    /*Changes the grid from having four colums to having two, and adds some margin so the edges of the page and the elements have some space between them*/
+    .topical-grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 1rem;
+    }
+
+    /*The following six selectors allign the elements to the new grid*/
+    .topical-main-heading {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .topical-article1 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    
+    .topical-article2 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    
+    .topical-article3 {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    .topical-image1 {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+
+    .topical-image2 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+}
+
+/*Changes the page when the width of the page is less than 1000px*/
+@media (max-width: 1000px) {
+    /*Removes the grid*/
+    .topical-grid-container {
+        display: block;
+    }
+}
+
+/* Adds the psudoclass visited, and changes the color of visited links, and applies the new color, even upon hover */
+.topical-links:visited {
+    color: #540daa;
+}
+
+/* Creates a new grid for the footer, as it is outside of the previous grid wrapper. This grid has the same dimentions as the first topical grid.
+It creates a margin only on the top of the footer, and changes the color to be the same as the backgrounds for the articles and the navigation bar*/
+.topical-footer {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 1.5rem;
+    margin: 1.5rem 0 0 0;
+    background-color: #F6F6F2;
+    padding-top: 1rem;
+}
+ /* Alligns the sources to the grid*/
+.topical-sources {
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+
+/* Is forming a website structured around the mentioned grid titles*/
+/* Using padding to space elements from eachother*/
+/* column gap just gaps horizontally */
+/* view width vw and view height is the size at what you can see on your site*/
+.climbing-site {
+    display: grid;
+    grid-template-areas: 1fr 0.5fr 1fr 
+}
+
+/* spacing the picture more to the left */
+.logo-climbing {
+    padding-left: 10%;
+}
+
+/* giving classes a grid name with grid-area*/
+.header-climbing {
+    grid-column: 1/4;
+    text-align: center;
+}
+
+/* border dashed is used for a middle man between two diffrent colors */
+.aside-climbing {
+    grid-column: 1/2;
+    background-color: #deded5;
+    border: #f6f6f2 0.25rem solid;
+    border-style: dashed;
+    padding: 2%;
+    
+}
+
+/* assigning a area that uses 2 of 3 spaces */
+.section-climbing {
+    grid-column: 2/3;
+}
+
+/* needed more space around so it got 5% more padding */
+.div-climbing {
+    grid-column: 3/4;
+    padding: 5%;
+    border: #f6f6f2 0.25rem solid;
+    border-style: dashed;
+    background-color: #deded5;
+
+}
+
+.footer-climbing {
+    grid-area: footer-climbing;
+    padding: 2%;
+    height: 120%;
+}
+
+.climbing-midle {
+    padding-top: 10%;
+}
+
+/* box shadow for the visual effect */
+.climbing-pic {
+    box-shadow: 1rem 1rem 2rem #f6f6f2;
+    width: 80%;
+    height: 80%;
+}
+
+@media (max-width: 1000px) {
+    .climbing-site {
+        display: block;
+    }
+    .climbing-midle {
+        padding-left: 30%;
+        padding-top: 0%;
+    }
+}
+
+/*Index CSS*/
+/*Banner image outside of main website grid. Made it the background of the top part of the page under the navigation bar*/
+/*https://www.w3schools.com/howto/howto_css_hero_image.asp*/
+/*Copied part of the example code from the above site to center the image so it scales*/
+.index-hero-image {
+    background-image: url("../media/p32fasadeoslometfotobenjaminward.jpg"); /*Photo by: BENJAMIN A.WARD*/
+    height: 16rem;
+    padding: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*Grid for placing elements on the page.
+Divided page into three columns and three rows as the page has three vertical sections as well as a horizontal image gallery with three images */
+/*https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout*/
+/*Copied the portion about fraction units from the above site to divide the grid*/
+.index-container-grid {
+    display: grid;
+    padding: 2rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 0.2fr 0.2fr;
+}
+/*Sets size of heading*/
+.index-container-grid h1 {
+    font-size: 2rem;
+}
+/*Sets size of subheading*/
+.index-container-grid h2 {
+    font-size: 1.5rem;
+}
+/*Sets size of all paragraphs in whole grid*/
+.index-container-grid p {
+    font-size: 1rem;
+}
+/*Places first section across the whole page and through the first third of the grid vertically*/
+/*Adds padding on bottom to give space between this and the next section*/
+/*https://www.w3schools.com/csS/css_grid.asp*/
+/*Used the above site to decide placement of grid elements*/
+.index-welcome-section {
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+    padding-bottom: 2rem;
+}
+/*Places second section across the whole page and through the mid third of the grid vertically*/
+.index-buildings-section {
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
+    margin: 0;
+}
+/*Creates a flexbox for the images within this section to fall in line horizontally, with the images evenly placed within the container.*/
+/*https://www.w3schools.com/csS/css3_flexbox_container.asp*/
+/*Used code and info about flexboxes from the above site to create the below flexbox (and other flexbox further down)*/
+.index-buildings-container-flex {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 1rem;
+    padding-bottom: 2rem;
+    justify-content: space-between;
+    margin: 0;
+}
+/*Named the images in building gallery as own class to fix the images' sizes*/
+/*Source: https://www.w3schools.com/css/css3_object-fit.asp*/
+/*Used 'object-fit scale-down' to scale down the images when flex direction is changed to column for smaller screens.
+Otherwise the images become stretched out to the full width of the container*/
+.building {
+    object-fit: scale-down;
+    max-height: 16rem;
+}
+/*Created flexbox container to align the two elements in the "map" section in a row.
+Used "space-between" to place the elements on either side of the container
+Gave the container the placement of the lower third of the main grid container of the page*/
+.index-map-container-flex {
+    display: flex;
+    flex-direction: row;
+    grid-column: 1 / 4;
+    grid-row: 3 / 4;
+    gap: 1rem;
+    padding: 1rem;
+    justify-content: space-between;
+    margin: 0;
+}
+/*Gave this image its own class to control its size similar to the building-class above*/
+.index-map-image {
+    object-fit: scale-down;
+    max-height: 24rem;
+}
+/*Gave this item its own class to control the size of the text area as well as placing the text lower down with padding*/
+/*https://www.freecodecamp.org/news/css-unit-guide/*/
+/*Used the 'view width' explained on the above site. This allows the text element to take up 40% of the width of the screen view*/
+.index-map-text {
+    width: 40vw;
+    height: 20rem;
+    padding-top: 10rem;
+}
+/*Changes the horizontal image gallery from row to column to fit smaller screens. Also removes grid so that all elements are visible.
+Since the elements are now under each other, the map text can take up more space so the width was changed to 80% of screen width*/
+/*https://www.w3schools.com/Css/css3_mediaqueries_ex.asp*/
+/*Used code from above site to create media query and understand what is necessary to include*/
+@media (max-width: 1000px) {
+    .index-container-grid{
+        display: block;
+    }
+    .index-map-container-flex {
+        overflow: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .index-map-text {
+        width: 80vw;
+    }
+    .index-buildings-container-flex {
+        overflow: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+    }
+}
+
+/*Accessability CSS*/
+/*Creates the grid the content will be alligned to, and adds some padding, so the content will have some visual space when scaled*/
+.accesability-grid {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+    padding: 1rem;
+}
+
+/*Alligns the h1 to the center and changes the font-size*/
+.accesability-h1{
+    text-align: center;
+    font-size: 3.5rem;
+}
+
+/*Places the content on the grid and sets the font size for everything in the grid*/
+.accesability-content {
+    font-size: 1.2rem;
+    grid-column: 2/3;
+}
+
+/*Sets the size for the images*/
+.acc-images {
+    height: auto;
+    width: 100%;
+}
+
+/*Alligns the images to the grid*/
+.acc-images-for-grid {
+    grid-column: 2/3;
+    padding: 1rem;
+}
+
+/*Removes the grid when a screen is less than 1000 pixels*/
+@media (max-width: 1000px) {
+    .accesability-grid {
+        display: block;
+    }
+}
