@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <title>Welcome to OsloMet Campus Pilestredet</title>
+</head>
+<body>
+    <!--This hamburger menu was partly inspired from this website https://alvarotrigo.com/blog/hamburger-menu-css/-->
+    <nav class="navbar">
+        <div class="hamburger-menu">
+            <input id="menu-toggle" type="checkbox" aria-label="Hamburger menu">
+            <label class="menu-btn" for="menu-toggle">
+                <span></span>
+            </label>
+            <a href="index.html"><img class="logo" src="media/newlogo.png" alt="logo" width="128" height="128"></a>
+            <ul class="menu-box">
+                <li><a class="menu-item" href="index.html">Welcome to OsloMet Campus Pilestredet</a></li>
+                <li><a class="menu-item" href="aspect.html">Climbing Site at Oslomet</a></li>
+                <li><a class="menu-item" href="aspect2.html">Campus</a></li>
+                <li><a class="menu-item" href="topical.html">Topical</a></li>
+                <li><a class="menu-item" href="accesability.html">Accessibility</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+    <!--Class for banner image outside of grid container to be styled separately-->
+        <div class="index-hero-image"></div>
+        <!--Grid container for main content of page to place elements-->
+        <div class="index-container-grid">
+            <!--First section that includes header and two paragraphs-->
+            <section class="index-welcome-section">
+                <h1>Welcome to OsloMet Campus Pilestredet</h1>
+                <p>OsloMet is an urban university with a diverse academic profile and a clear international orientation.</p>
+                 <p>- From the OsloMet strategy for 2024</p>
+            </section>
+            <!--Second section that includes a subheading and a flexbox-->
+            <section class="index-buildings-section">
+                <h2>Get to know Campus Pilestredet</h2>
+                <!--Flexbox that includes three images that will be styled together-->
+                <div class="index-buildings-container-flex">
+                        <img class="building" src="media/oslometp35.jpg" alt="Facade of Pilestredet 35. Photo by Mia Engenes Bratlie">
+                        <img class="building" src="media/p48.jpg" alt="Library in Pilestredet 48. Photo by Jenny Stav">
+                        <img class="building" src="media/p52.jpg" alt="Facade of Pilestredet 52. A student is walking towards the building. Photo by Skjalg Bøhmer Vold/OsloMet">
+                </div>
+                <p>
+                    Photographed by by Mia Engenes Bratlie, Jenny Stav, and Skjalg Bøhmer Vold/OsloMet.
+                </p>
+            </section>
+            <!--Last section that is a flex container that includes a paragraph and an image-->
+            <section class="index-map-container-flex">
+                <p class="index-map-text">Oslomet’s largest campus has been located in Pilestredet since 1994 and today includes the faculties of 
+                Health sciences, Education and international studies, Social sciences, and Technology art and design</p>
+                <img class="index-map-image" src="media/mazemappilestredet.jpg" alt="Mazemap image of campus Pilestredet">
+            </section>
+        </div>
+    </main>
+    
+    <!--Re-uses the footer from aspect2-->
+    <footer class="footer">
+		<ul class="grid1">
+			<li><strong> OSLO METROPOLITAN UNIVERSITY</strong></li>
+			<li> STORBYUNIVERSITETET</li>
+			<li> P.O. Box 4, St. Olavs plass</li>
+			<li>NO-0130 Oslo</li>
+			<li> Norway</li>
+			<li>Tel.: +47 67 23 50 00</li>
+		</ul>
+	</footer>
+
+</body>
+</html>
